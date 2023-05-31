@@ -14,12 +14,16 @@
 
 .buy_pepsi_products:hover {
   background-color: white;
-  color: #0065c3
+  color: #0065c3;
+}
+
+.buy_pepsi_products:hover span {
+  animation-name: upAndDownLetters;
+  animation-duration: .6s;
+  animation-iteration-count: 1;
 }
 
 .pepsi_logo {
-  width: 60px;
-  height: 60px;
   cursor: pointer;
 }
 
@@ -27,6 +31,153 @@
   animation: pepsi_logo_spin;
   animation-duration: .4s;
   /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+}
+
+
+.responsive_menu_item {
+  animation-name: appearFromBottom;
+  cursor: pointer;
+  animation-duration: .6s;
+  animation-iteration-count: 1;
+}
+
+@keyframes appearFromBottom {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateY(27px);
+    opacity: .20;
+  }
+
+  20% {
+    transform: translateY(24px);
+    opacity: .40;
+  }
+
+  30% {
+    transform: translateY(21px);
+    opacity: .60;
+  }
+
+  40% {
+    transform: translateY(18px);
+    opacity: .8;
+  }
+
+  50% {
+    transform: translateY(15px);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateY(12px);
+  }
+
+  70% {
+    transform: translateY(9px);
+  }
+
+  80% {
+    transform: translateY(6px);
+  }
+
+  90% {
+    transform: translateY(3px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+@keyframes upAndDownLetters {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  10% {
+    transform: translateY(-10px);
+  }
+
+  15% {
+    transform: translateY(-15px);
+  }
+
+  20% {
+    transform: translateY(-20px);
+  }
+
+  25% {
+    transform: translateY(-25px);
+  }
+
+  30% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  35% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateY(15px);
+    opacity: 1;
+  }
+
+  45% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  55% {
+    transform: translateY(0px);
+  }
+
+  60% {
+    transform: translateY(-2px);
+  }
+
+  65% {
+    transform: translateY(-5px);
+  }
+
+  70% {
+    transform: translateY(-3px);
+  }
+
+  75% {
+    transform: translateY(-2px);
+  }
+
+  80% {
+    transform: translateY(-1px);
+
+  }
+
+  /* 85%{
+  transform: translateY(-3px);
+}
+
+  90% {
+    transform: translateY(-2px);
+  }
+
+  95% {
+    transform: translateY(-1px);
+  } */
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes pepsi_logo_spin {
@@ -45,7 +196,8 @@
   50% {
     transform: rotate(350deg);
   }
-  60%{
+
+  60% {
     transform: rotate(340deg);
   }
 
