@@ -2,7 +2,7 @@ import { RiArrowDropUpLine, RiCloseFill } from 'react-icons/ri'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 import PepsiLogo from '../assets/pepsi_logo_navbar.png'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 const Navbar = () => {
@@ -11,9 +11,17 @@ const Navbar = () => {
 
     const toggleMenu = () => setIsMenuVisible(prevState => !prevState)
 
+    useEffect(() => {
+        if (isMenuVisible) {
+            document.body.style.overflow = 'hidden'
+            return
+        }
+        document.body.style.overflow = 'auto'
+    }, [isMenuVisible])
+
     return (
         <nav
-            className="w-full h-[100px] bg-[#0065C3] flex justify-between px-[2.5%] items-center fixed top-0"
+            className="w-full h-[100px] bg-[#0065C3] flex justify-between px-[2.5%] items-center fixed top-0 z-[999]"
         >
             <ul
                 className='flex items-center'
@@ -100,7 +108,7 @@ const Navbar = () => {
             {
                 isMenuVisible
                     ? <div
-                        className='w-full h-[calc(100vh-100px)] bg-[#0065C3] fixed top-[100px] left-0 lg:hidden flex justify-center items-center text-center'
+                        className='w-full h-[calc(100vh-100px)] bg-[#0065C3] fixed top-[100px] left-0 lg:hidden flex justify-center items-center text-center z-[99]'
                     >
                         <ul
                             className='text-[24px] nono_sans font-bold text-white flex flex-col gap-6 mt-[-60px]'

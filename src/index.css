@@ -8,7 +8,8 @@
   font-family: 'Noto Sans', sans-serif;
 }
 
-.buy_pepsi_products {
+.buy_pepsi_products,
+.get_it_now_btn {
   transition: .1s ease-in-out;
 }
 
@@ -17,7 +18,18 @@
   color: #0065c3;
 }
 
-.buy_pepsi_products:hover span {
+.get_it_now_btn{
+  background-color: transparent;
+  color: white;
+}
+
+.get_it_now_btn:hover {
+  background-color: white;
+  color: #0065c3;
+}
+
+.buy_pepsi_products:hover span,
+.get_it_now_btn:hover span {
   animation-name: upAndDownLetters;
   animation-duration: .6s;
   animation-iteration-count: 1;
@@ -39,6 +51,25 @@
   cursor: pointer;
   animation-duration: .6s;
   animation-iteration-count: 1;
+}
+
+#section1 {
+  background-image: url("assets/background_section_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+@media (min-width: 768px){
+  .pepsi_can{
+  background-image: url("assets/pepsi_can_section_2.png");
+background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto 544px;
+    height: 467px;
+    width: 100%;
+  }
 }
 
 @keyframes appearFromBottom {
